@@ -1,0 +1,185 @@
+.todo-app {
+  font-family: sans-serif;
+}
+
+/** add todo **/
+.add-todo {
+  margin-left: 0.5rem;
+  background: #aa8e8d;
+  color: #4d244e;
+  border-color: #aa8e8d;
+  border-radius: 5px;
+  height: 5vh;
+
+}
+
+/** todo list **/
+.todo-list {
+  margin-top: 1rem;
+  text-align: center;
+  list-style: none;
+  color: #aa8e8d;
+  font-weight: 400;
+}
+
+/** todo item **/
+.todo-item {
+  font-family: monospace;
+  cursor: pointer;
+  line-height: 1.5;
+  text-align: center;
+  font-size: 30px;
+  background: #ae5f75;
+  height: 69px;
+  width: 37%;
+  display: block;
+  border-bottom: 1px solid #2C3E50;
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: 900;
+  /* font-size: 11px; */
+  letter-spacing: 1px;
+  text-indent: 20px;
+  margin-left: 31%;
+  cursor: pointer;
+  transition: all 0.7s ease;
+  position: relative;
+  padding: 5px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+}
+.todo-item__text--completed {
+  text-decoration: line-through;
+  color: lightgray;
+}
+
+/** visibility filters **/
+.filter {
+  padding: 0.3rem 0;
+  margin: 0 0.3rem;
+  cursor: pointer;
+  /* margin-left: 45%; */
+}
+.filter--active {
+  border-bottom: 1px solid #aa8e8d;
+}
+
+
+
+
+
+
+.inputtodo{
+  margin-left: 33%;
+  border-radius: 5px;
+  width: 30%;
+  height: 5vh;
+}
+
+.filters{
+  /* margin-left: 35%; */
+  /* display: flex;
+  flex-direction: row; */
+  text-align: center;
+  color: #aa8e8d;
+  display: inline;
+}
+
+
+/* tiny reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+/* body */
+body{
+  background: #4d244e;
+  font-family: sans-serif;
+  border-top: 5px solid #aa8e8d;
+}
+/* title */
+h1{
+  color: #aa8e8d;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 900;
+}
+/* tasks */
+.tasks{
+  width: 300px;
+  height: 405px;
+  position: absolute;
+  top: 20%;
+  left: 0px; 
+  right: 0px;
+  margin: 0px auto;
+}
+input[type=checkbox] {
+  display: none;
+}
+label{
+  background: #ae5f75;
+  height: 69px;
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid #2C3E50;
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: 900;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-indent: 20px;
+  cursor: pointer;
+  transition: all 0.7s ease;
+  position: relative;
+  padding: 5px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+label h2 span{
+  display: block;
+  font-size: 12px;
+  text-transform: capitalize;
+  font-weight: normal;
+  color: #fff;
+}
+.todo-item:before{
+  content:"";
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  right: 20px;
+  top: 30%;
+  transition: border 0.7s ease
+}
+.todo-item-1:checked ~ todo-item[for=todo-item-1],
+.todo-item-2:checked ~ todo-item[for=todo-item-2],
+.todo-item-3:checked ~ todo-item[for=todo-item-3],
+.todo-item-4:checked ~ todo-item[for=todo-item-4],
+.todo-item-5:checked ~ todo-item[for=todo-item-5]{
+  background: #6d335c;
+  border-bottom: 1px solid #34495E;
+  color: #d37b79;
+}
+.todo-item-1:checked ~ todo-item[for=todo-item-1] h2 span,
+.todo-item-2:checked ~ todo-item[for=todo-item-2] h2 span,
+.todo-item-3:checked ~ todo-item[for=todo-item-3] h2 span,
+.todo-item-4:checked ~ todo-item[for=todo-item-4] h2 span,
+.todo-item-5:checked ~ todo-item[for=todo-item-5] h2 span{
+  color: #f6bd66;
+}
+.todo-item-1:checked ~ todo-item[for=todo-item-1]:before,
+.todo-item-2:checked ~ todo-item[for=todo-item-2]:before,
+.todo-item-3:checked ~ todo-item[for=todo-item-3]:before,
+.todo-item-4:checked ~ todo-item[for=todo-item-4]:before,
+.todo-item-5:checked ~ todo-item[for=todo-item-5]:before{
+  background: url("https://i.imgur.com/eoPQ05r.png") no-repeat center center;
+}
